@@ -49,8 +49,7 @@ def gen_updater_config():
     with open(os.path.join(REPO_PATH, "localrepo.lua"), "w") as file:
         file.write("-- Auto-generated updater-ng configuration\n")
         for repo in repo_list():
-            file.write("Repository('localrepo-" + repo + "', 'file://" +
-                       REPO_PATH + "/" + repo + "')\n")
+            file.write("Repository('localrepo-{0}', './{0}', {{index = 'Packages.gz'}})\n".format(repo))
 
 
 def parse_control(block):
