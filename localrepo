@@ -479,7 +479,7 @@ def parse_arguments():
                             repository""")
 
     parser_rm = subparsers.add_parser('rm',
-                                      help="Add packages to repository")
+                                      help="Remove packages from repository")
     parser_rm.add_argument('--repo', **repo_arg)
     parser_rm.add_argument('--all', '-a', action='store_true',
                            help="""Remove all packages in repository including
